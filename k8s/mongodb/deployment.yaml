@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+
+spec: #especificação do replicaset
+  replicas: 1
+  selector:
+    matchLabels: #quais pods ira gerenciatr
+      app: mongodb #esse aqui
+  template:
+    metadata:
+      labels: 
+        app: mongodb #eh igual a esse aqui
+    spec: #espicificação do pod
+      containers:
+        - name: mongodb
+          image: mongo:4.4.5
+          ports:
+            - containerPort: 27017 
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              value: mongouser
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              value: mongopwd              
