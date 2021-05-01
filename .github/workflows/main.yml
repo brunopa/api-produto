@@ -55,4 +55,4 @@ jobs:
           push: true
           tags:
             brunopa/k8s:latest
-            brunopa/k8s:${{github.run_number}}
+            #brunopa/k8s:${{github.run_number}}
