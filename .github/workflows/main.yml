@@ -55,7 +55,7 @@ jobs:
             #brunopa/k8s:${{github.run_number}}
   CD:
     runs-on: ubuntu-latest
-    #needs: [CI]
+    needs: [CI]
     steps:
       - uses: actions/checkout@v2
       
