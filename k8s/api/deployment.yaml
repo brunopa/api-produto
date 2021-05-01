@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: api
 spec: #especificação do replicaset
-  replicas: 10
+  replicas: 9
   selector:
     matchLabels: #quais pods ira gerenciatr
       app: api #esse aqui
