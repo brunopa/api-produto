@@ -52,6 +52,7 @@ jobs:
           push: true
           tags:
             brunopa/k8s:latest
+            
             brunopa/k8s:${{github.run_number}}
   CD:
     runs-on: ubuntu-latest
